@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .left {
+          background-color: #2196F3;
+          padding: 20px;
+          float: left;
+          width: 20%; /* The width is 20%, by default */
+          height: auto;
+        }
+        
+        .main {
+          background-color: #f1f1f1;
+          padding: 20px;
+          float: left;
+          width: 60%; /* The width is 60%, by default */
+        }
+        
+        .right {
+          background-color: #04AA6D;
+          padding: 20px;
+          float: left;
+          width: 20%; /* The width is 20%, by default */
+        }
+        
+        /* Use a media query to add a break point at 800px: */
+        @media screen and (max-width: 800px) {
+          body{
+            background-color: #222;
+            margin-top: 5px;
+          }
+          .left {
+            background-color: red;
+            width: 20%;
+            text-align: center;
+            text-transform: uppercase;
+            animation: left 5s infinite;
+
+          } .main{
+            width: 60%;
+            text-align: center;
+          }
+          /* .main{
+            width: 100%;
+          } */
+           .right{
+            background-color: red;
+            width: 20%;
+            text-align: center;
+            text-transform: uppercase;
+            animation: right 5s infinite;
+
+          }
+          @keyframes left {
+          50% {transform: rotate(182deg);}
+          }
+          @keyframes right {
+          50% {transform: rotate(182deg);}
+          }
+        }
+        </style>
+
+</head>
+<body>
+   
+    <div class="left" id="demo">
+      </div>
+      
+      <div class="main">
+         <h1 id="time"></h1>
+        <h2 id="demo3"></h2>
+        <h2 id="demo4"></h2>
+        <h2 id="demo5"></h2>
+        <h2 id="demo6"></h2>
+        <h2 id="demo7"></h2>
+        <h2 id="demo8"></h2>
+        <h2 id="demo9"></h2>
+        <h2 id="demo10"></h2>
+        <h2 id="demo11"></h2>
+        <h2 id="demo12"></h2>
+        <h2 id="demo13"></h2>
+        <h2 id="demo14"></h2>
+
+      </div>
+      <div class="right" id="demo2">
+      </div>
+
+
+<script>
+  let language = "Shamapti Sarker";
+
+let text = "";
+for (let x of language) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+
+
+
+let language2 = "Shamapti Sarker";
+
+let text2 = "";
+for (let x of language2) {
+    text2 += x + "<br>";
+}
+
+document.getElementById("demo2").innerHTML = text2;
+
+
+
+
+
+
+const myTimeout = setTimeout(myGreeting, 5000);
+
+function myGreeting() {
+  document.getElementById("demo3").innerHTML = "Wellcome!"
+}
+
+const myTimeout1 = setTimeout(myGreeting1, 10000);
+
+function myGreeting1() {
+  document.getElementById("demo4").innerHTML = "Hope you are fit and fine !";
+}
+
+const myTimeout3 = setTimeout(myGreeting3, 15000);
+
+function myGreeting3() {
+  document.getElementById("demo5").innerHTML = "This program created just for you !";
+}
+
+setTimeout(myGreeting4, 20000);
+
+function myGreeting4() {
+  document.getElementById("demo6").innerHTML = " And hope you will enjoy it";
+}
+
+setTimeout(myGreeting5, 25000);
+
+function myGreeting5() {
+  document.getElementById("demo7").innerHTML = "It's been a long time we haven't met.";
+}
+
+setTimeout(myGreeting6, 30000);
+
+function myGreeting6() {
+  document.getElementById("demo8").innerHTML = "It was berfore a long day i was saying you about meet you.";
+}
+
+setTimeout(myGreeting7, 35000);
+
+function myGreeting7() {
+  document.getElementById("demo9").innerHTML = "But you didn't hear.";
+}
+setTimeout(myGreeting8, 40000);
+
+function myGreeting8() {
+  document.getElementById("demo10").innerHTML = "It's too bad ";
+}
+
+setTimeout(myGreeting9, 45000);
+
+function myGreeting9() {
+  document.getElementById("demo11").innerHTML = "Whatever ";
+}
+
+setTimeout(myGreeting11, 50000);
+
+function myGreeting11() {
+  document.getElementById("demo12").innerHTML = "Don't be serious, just for fun !!";
+}
+
+setTimeout(myGreeting12, 55000);
+
+function myGreeting12() {
+  document.getElementById("demo13").innerHTML = "At last ";
+}
+
+setTimeout(myGreeting13, 55000);
+
+function myGreeting13() {
+  document.getElementById("demo14").innerHTML = "Thanks for give me the picture";
+}
+
+if (new Date().getHours() < 18) {
+  document.getElementById("time").innerHTML = "Good day!";
+}
+
+
+</script>
+</body>
+</html>
